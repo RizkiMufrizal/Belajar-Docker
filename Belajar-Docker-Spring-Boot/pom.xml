@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.rizki.mufrizal.belajar.docker</groupId>
-    <artifactId>Belajar-Docker</artifactId>
+    <artifactId>Belajar-Docker-Spring-Boot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Belajar Docker</name>
+    <name>Belajar Docker Spring Boot</name>
     <description>Aplikasi ini dibuat dalam rangka belajar docker</description>
 
     <parent>
@@ -56,7 +56,7 @@
     </dependencies>
 
     <build>
-        <finalName>belajar.docker</finalName>
+        <finalName>belajar.docker.spring.boot</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

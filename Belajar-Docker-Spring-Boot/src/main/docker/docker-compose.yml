@@ -7,7 +7,7 @@ mysql:
     - MYSQL_PASSWORD=mufrizal
 
 belajar-docker:
-  image: rizki.mufrizal/belajar.docker
+  image: rizki.mufrizal/belajar.docker.spring.boot
   links:
     - mysql
   ports:
