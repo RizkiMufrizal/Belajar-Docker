@@ -1,0 +1,14 @@
+mysql:
+  image: mysql:latest
+  environment:
+    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_DATABASE=demo
+    - MYSQL_USER=rizki
+    - MYSQL_PASSWORD=mufrizal
+
+belajar-docker:
+  image: rizki.mufrizal/belajar.docker
+  links:
+    - mysql
+  ports:
+    - 8080:8080
