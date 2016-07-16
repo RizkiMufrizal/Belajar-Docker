@@ -2,7 +2,7 @@ mysql:
   image: mysql:latest
   environment:
     - MYSQL_ROOT_PASSWORD=root
-    - MYSQL_DATABASE=demo
+    - MYSQL_DATABASE=microservicespring
     - MYSQL_USER=rizki
     - MYSQL_PASSWORD=mufrizal
 
