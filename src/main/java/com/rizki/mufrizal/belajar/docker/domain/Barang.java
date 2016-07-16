@@ -1,9 +1,11 @@
 package com.rizki.mufrizal.belajar.docker.domain;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
-
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.UUID;
@@ -16,20 +18,22 @@ import java.util.UUID;
  * @Package com.rizki.mufrizal.belajar.docker.domain
  * @File Barang
  */
-@Document(collection = "tb_barang")
+@Entity
+@Table(name = "tb_barang")
 public class Barang implements Serializable {
 
     @Id
-    @Field(value = "id_barang")
+    @Column(name = "id_barang")
     private UUID idBarang;
 
-    @Field(value = "nama_barang")
+    @Column(name = "nama_barang")
     private String namaBarang;
 
-    @Field(value = "jenis_barang")
+    @Enumerated(value = EnumType.STRING)
+    @Column(name = "jenis_barang")
     private JenisBarang jenisBarang;
 
-    @Field(value = "harga_barang")
+    @Column(name = "harga_barang")
     private BigDecimal hargaBarang;
 
     public UUID getIdBarang() {
