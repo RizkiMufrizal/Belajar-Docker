@@ -40,7 +40,7 @@ module.exports.connections = {
   * Run: npm install sails-mysql                                             *
   *                                                                          *
   ***************************************************************************/
-  MysqlServer: {
+  MariadbServer: {
     adapter: 'sails-mysql',
     host: process.env.MARIADB_PORT_3306_TCP_ADDR,
     user: process.env.MARIADB_ENV_MYSQL_USER,
