@@ -1,9 +1,11 @@
-FROM node:6.3.1
+FROM node:alpine
 
-RUN apt-get update && apt-get install -y wget
-ENV DOCKERIZE_VERSION v0.2.0
+RUN apk update && apk add ca-certificates wget openssl && update-ca-certificates
+ENV DOCKERIZE_VERSION v0.6.0
 RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
     && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+RUN npm cache clean --force
+RUN npm install -g npm
 RUN npm install -g sails
 RUN mkdir /belajar-sailsjs-docker
 WORKDIR /belajar-sailsjs-docker
